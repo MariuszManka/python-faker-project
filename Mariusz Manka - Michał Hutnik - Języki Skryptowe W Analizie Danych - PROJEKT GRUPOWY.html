@@ -13977,26 +13977,30 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<h1 id="Wprowadzenie-do-biblioteki-Faker">Wprowadzenie do biblioteki Faker<a class="anchor-link" href="#Wprowadzenie-do-biblioteki-Faker">&#182;</a></h1><h3 id="Spis-tre%C5%9Bci:">Spis tre&#347;ci:<a class="anchor-link" href="#Spis-tre%C5%9Bci:">&#182;</a></h3><ol>
-<li>Wprowadzenie do tematu</li>
-<li>Import biblioteki Faker oraz innych niezbędnych bibliotek</li>
-<li>Tworzenie instancji klasy <code>Faker</code>.</li>
-<li>Lokalizacja</li>
-<li>Podstawowe funkcje</li>
-</ol>
-<hr>
+<h1 id="Wprowadzenie-do-biblioteki-Faker">Wprowadzenie do biblioteki Faker<a class="anchor-link" href="#Wprowadzenie-do-biblioteki-Faker">&#182;</a></h1><h2 id="Spis-tre%C5%9Bci:">Spis tre&#347;ci:<a class="anchor-link" href="#Spis-tre%C5%9Bci:">&#182;</a></h2><h3 id="1.-Wprowadzenie-do-tematu-losowo%C5%9Bci-w-systemach-komputerowych">1. Wprowadzenie do tematu losowo&#347;ci w systemach komputerowych<a class="anchor-link" href="#1.-Wprowadzenie-do-tematu-losowo%C5%9Bci-w-systemach-komputerowych">&#182;</a></h3><h3 id="2.-Import-biblioteki-Faker-oraz-innych-niezb%C4%99dnych-bibliotek">2. Import biblioteki Faker oraz innych niezb&#281;dnych bibliotek<a class="anchor-link" href="#2.-Import-biblioteki-Faker-oraz-innych-niezb%C4%99dnych-bibliotek">&#182;</a></h3><h3 id="3.-Tworzenie-instancji-klasy-Faker.">3. Tworzenie instancji klasy <code>Faker</code>.<a class="anchor-link" href="#3.-Tworzenie-instancji-klasy-Faker.">&#182;</a></h3><h3 id="4.-Lokalizacja">4. Lokalizacja<a class="anchor-link" href="#4.-Lokalizacja">&#182;</a></h3><h3 id="5.-Podstawowe-funkcje">5. Podstawowe funkcje<a class="anchor-link" href="#5.-Podstawowe-funkcje">&#182;</a></h3><hr>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Losowo%C5%9B%C4%87-w-systemach-komputerowych">Losowo&#347;&#263; w systemach komputerowych<a class="anchor-link" href="#Losowo%C5%9B%C4%87-w-systemach-komputerowych">&#182;</a></h3><h1 id="//TODO-UZUPE%C5%81NI%C4%86">//TODO UZUPE&#321;NI&#262;<a class="anchor-link" href="#//TODO-UZUPE%C5%81NI%C4%86">&#182;</a></h1><h3 id="Czym-s%C4%85-dane-losowe?">Czym s&#261; <em>dane losowe</em>?<a class="anchor-link" href="#Czym-s%C4%85-dane-losowe?">&#182;</a></h3><p><em>Dane losowe</em> nazywane również fikcyjnymi - jak sama nazwa wskazuje są to losowo generowane dane, najczęściej z jakiegoś określonego zakresu. Z założenia mają one być fałszywe, przy jednoczesym jak najwięszym zbliżeniu do danych faktycznych. Innymi słowy - losowo generowana para - imię i nazwisko - będzie zawierała imię oraz nazwisko jak najbardziej zbliżone do używanych w danym języku, tak aby dane wydawały się być prawdziwe, a jednocześnie nie wskazywały na konkretną osobę.</p>
+<h1 id="Wprowadzenie-do-tematu-losowo%C5%9Bci-w-systemach-komputerowych">Wprowadzenie do tematu losowo&#347;ci w systemach komputerowych<a class="anchor-link" href="#Wprowadzenie-do-tematu-losowo%C5%9Bci-w-systemach-komputerowych">&#182;</a></h1>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Losowo%C5%9B%C4%87-w-systemach-komputerowych">Losowo&#347;&#263; w systemach komputerowych<a class="anchor-link" href="#Losowo%C5%9B%C4%87-w-systemach-komputerowych">&#182;</a></h3><p>W przypadku komputerów oraz wszelkiego rodzaju systemów komputerowych, ciężko mówić o jakiejkolwiek losowości. Komputery są maszynami liczącymi - z założenia wykonującymi bardziej lub mniej skomplikowane obliczenia matematyczne. Same w sobie nie są w stanie wygenerować liczby losowej.<br>
+Aby wygenerować liczbę losową komputer musiałby zmierzyć pewien rodzaj zjawiska fizycznego zachodzącego poza nim samym. Teoria mówi że do wygenerowania liczb losowych komputery mogłby mierzyć rozpad radioaktywny atomu - nie ma sposobu, aby wiedzieć na pewno, kiedy nastąpi rozpad radioaktywny, więc jest to zasadniczo "czysta przypadkowość". Bardziej codziennym przypadkiem może być mierzenie przez komputer <strong>szumu atmosferycznego</strong> lub też <strong>czas naciśnięcia klawiszy na klawiaturze</strong>. Te dwie miary w przyblizeniu można nazwać przypadkowymi. Jednak i te praktyki są bardzo rzadko stosowane. W przypadku systemów komputerowych jednak najczęściej będziemy mówili o <code>pseudolosowości</code>.</p>
+<h3 id="Pseudolosowo%C5%9B%C4%87">Pseudolosowo&#347;&#263;<a class="anchor-link" href="#Pseudolosowo%C5%9B%C4%87">&#182;</a></h3><p>Liczby pseudolosowe są generowane za pomocą <strong>generatorów liczb pseudolosowych.</strong>  Przyjmują one pewną wartość - tak zwane <code>ziarno</code> z (ang. <code>seed</code>) i wykonują na nich szereg operacji matematycznych. Liczba która wyjdzie w wyniku takich przekształceń jest w pewnym sensie losowa. Nie jest to jednak w pełni losowa wartość, ponieważ <strong>znająć <code>ziarno</code> jesteśmy w stanie odtworzyć liczbę zwróconą w wyniku wszystkich przekształceń.</strong>  Systemy komputerowe jako <code>ziarno</code> <strong>najczęściej wybierają aktualną datę</strong>. W systemach z rodziny Unix, ta przechowywana jest jako <strong>liczba sekund która upłynęła od 1 stycznia 1970 roku.</strong> Stąd liczba ta w każdej sekundzie będzie inna. To podejście jednak ma jedną wadę, liczby wygenerowane w tej samej sekunidze będą sobie równe ponieważ liczba na wejściu - <code>ziarno</code> będzie identyczna. Jednak w większości przypadków takie podejście sprawdza się dobrze, i zaspokaja potrzeby większości programistów. Należy również nadmienić że większość programów oraz generatorów liczb losowych dopuszcza podanie własnego <code>ziarna</code> na potrzeby generowania liczb.</p>
+<h3 id="Czym-s%C4%85-dane-losowe?">Czym s&#261; <em>dane losowe</em>?<a class="anchor-link" href="#Czym-s%C4%85-dane-losowe?">&#182;</a></h3><p><em>Dane losowe</em> nazywane również fikcyjnymi - jak sama nazwa wskazuje są to losowo generowane dane, najczęściej z jakiegoś określonego zakresu. Z założenia mają one być fałszywe, przy jednoczesym jak najwięszym zbliżeniu do danych faktycznych. Innymi słowy - losowo generowana para - imię i nazwisko - będzie zawierała imię oraz nazwisko jak najbardziej zbliżone do używanych w danym języku, tak aby dane wydawały się być prawdziwe, a jednocześnie nie wskazywały na konkretną osobę.</p>
 <h3 id="Gdzie-u%C5%BCywane-s%C4%85-dane-losowe?">Gdzie u&#380;ywane s&#261; <em>dane losowe</em>?<a class="anchor-link" href="#Gdzie-u%C5%BCywane-s%C4%85-dane-losowe?">&#182;</a></h3><p>Takie dane mają stanowić substytut lub obiekt zastępczy dla prawdziwych danych. Używane są najczęściej do celów <strong>testowych i operacyjnych</strong>. Wykorzystuje się je między innymi:</p>
 <ul>
 <li>Do zapełniania baz danych losowymi rekordami, </li>
 <li>Jako zastępstwo faktycznych danych na stronach internetowych na etapie developmentu aplikacji</li>
 <li>Na etapie testów apllikacji - aby sprawdzić jak napisany przez nas kod reaguje na różnego rodzaju dane wejściowe</li>
 <li>Przy mockowaniu odpowiedzi np. z serwera API</li>
+<li>W statystyce</li>
+<li>W kryptofrafii</li>
+<li>Przy okazji symulacji różnych procesów</li>
 </ul>
 <h3 id="Czym-jest-Faker?">Czym jest Faker?<a class="anchor-link" href="#Czym-jest-Faker?">&#182;</a></h3><p><code>Faker</code> <strong>jest pythonową biblioteką pozwalającą na generowanie losowych danych różnego typu</strong>.</p>
 <h3 id="Faker---licencja">Faker - licencja<a class="anchor-link" href="#Faker---licencja">&#182;</a></h3><p>Biblioteka <code>Faker</code> udostępniana jest na zasadach bardzo popularnej <strong>open-source'owej licencji MIT</strong>. Według definicji jest to jedna z najprostszych i najbardziej liberalnych licencji otwartego oprogramowania. Daje użytkownikom <strong>nieograniczone prawo do używania, kopiowania, modyfikowania i rozpowszechniania oryginalnego lub zmodyfikowanego programu</strong> w postaci binarnej lub źródłowe. Oznacza to że każdy programista może bez żadnych konsekwencji kopiować kod źródłowy biblioteki, modyfikować go wedle własnych potrzeb, oraz korzystać ze zmodyfikowanej jego wersji. Każdy z programistów może również poprawiać zgłoszone błędy oraz udostępniać poprawiony kod innym.</p>
@@ -14064,10 +14068,12 @@ conda install Faker</code></pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[182]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">faker</span> <span class="kn">import</span> <span class="n">Faker</span>
+<span class="kn">import</span> <span class="nn">string</span>
+<span class="kn">import</span> <span class="nn">random</span>
 </pre></div>
 
      </div>
@@ -14084,7 +14090,7 @@ conda install Faker</code></pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fake</span> <span class="o">=</span> <span class="n">Faker</span><span class="p">()</span>
@@ -14104,13 +14110,13 @@ conda install Faker</code></pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[39]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;faker.proxy.Faker at 0x1df26fc81c0&gt;</pre>
+<pre>&lt;faker.proxy.Faker at 0x1f13cd6c5b0&gt;</pre>
 </div>
 
 </div>
@@ -14131,7 +14137,7 @@ Do sprawdzenia obecnej lokalizacji służy atrybut <code>locales</code>. Domyśl
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[89]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fake</span><span class="o">.</span><span class="n">locales</span>
@@ -14150,7 +14156,7 @@ Do sprawdzenia obecnej lokalizacji służy atrybut <code>locales</code>. Domyśl
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[89]:</div>
 
 
 
@@ -14173,7 +14179,7 @@ Do sprawdzenia obecnej lokalizacji służy atrybut <code>locales</code>. Domyśl
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">polish_localized_faker</span> <span class="o">=</span> <span class="n">Faker</span><span class="p">(</span><span class="s1">&#39;pl_PL&#39;</span><span class="p">)</span>
@@ -14193,7 +14199,7 @@ Do sprawdzenia obecnej lokalizacji służy atrybut <code>locales</code>. Domyśl
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[42]:</div>
 
 
 
@@ -14211,7 +14217,7 @@ Do sprawdzenia obecnej lokalizacji służy atrybut <code>locales</code>. Domyśl
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[91]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
@@ -14235,11 +14241,11 @@ Do sprawdzenia obecnej lokalizacji służy atrybut <code>locales</code>. Domyśl
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Dominik Bąbol
-Dagmara Łągiewka
-Sonia Krajniak
-Albert Froń
-pan Alan Prostak
+<pre>Sylwia Kluczek
+Karina Flaga
+Paweł Łaszczyk
+Apolonia Durczok
+Józef Boksa
 </pre>
 </div>
 </div>
@@ -14256,7 +14262,7 @@ pan Alan Prostak
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">country_codes_array</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ru_RU&#39;</span><span class="p">,</span> <span class="s1">&#39;pl_PL&#39;</span><span class="p">,</span> <span class="s1">&#39;ja_JP&#39;</span><span class="p">,</span> <span class="s1">&#39;it_IT&#39;</span><span class="p">]</span>
@@ -14277,7 +14283,7 @@ pan Alan Prostak
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 
 
 
@@ -14300,7 +14306,7 @@ pan Alan Prostak
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">):</span>
@@ -14329,15 +14335,15 @@ pan Alan Prostak
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Jerzy Drobnik
-山田 拓真
-Савельев Давыд Фёдорович
-Синклитикия Александровна Костина
+<pre>Konrad Pajdak
+Antonietta Pacelli
+林 舞
+Шашков Каллистрат Яковлевич
 ==============================
-清水 さゆり
-Elisa Argenti
-高橋 くみ子
-木村 真綾
+Валентина Богдановна Харитонова
+pan Konrad Ważna
+Марина Павловна Павлова
+Angelica Cociarelli-Salvemini
 </pre>
 </div>
 </div>
@@ -14360,7 +14366,7 @@ Elisa Argenti
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[81]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Metoda zwracająca imię - first_name(): &quot;</span><span class="p">)</span>
@@ -14404,19 +14410,19 @@ Elisa Argenti
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Metoda zwracająca imię - first_name(): 
-Marika
+Emil
 =================
 
 Metoda zwracająca nazwisko - last_name(): 
-Woronko
+Michnik
 =================
 
 Metoda zwracająca tylko damskie imię - first_name_female():
-Klara, Eliza, Ewa, Elżbieta, Urszula, Kamila, Julita, Sara, Roksana, Kalina, 
+Bianka, Monika, Adrianna, Natasza, Gaja, Adrianna, Lidia, Inga, Monika, Karina, 
 =================
 
 Metoda zwracająca tylko męskie imię first_name_male(): 
-Leon, Kacper, Marek, Ernest, Antoni, Witold, Krzysztof, Mieszko, Tymoteusz, Juliusz, 
+Marek, Konrad, Maksymilian, Jan, Szymon, Krzysztof, Filip, Maciej, Kajetan, Wojciech, 
 =================
 
 
@@ -14425,7 +14431,7 @@ pani
 =================
 
 Metoda zwracająca parę imię i nazwisko - name(): 
-Ada Rogacz
+Jerzy Kucewicz
 =================
 
 </pre>
@@ -14445,7 +14451,7 @@ Ada Rogacz
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[92]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Metoda zwracająca pełny adres - address(): &quot;</span><span class="p">)</span>
@@ -14485,16 +14491,16 @@ Ada Rogacz
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Metoda zwracająca pełny adres - address(): 
-pl. Niepodległości 56/77
-94-702 Biała Podlaska
+al. Handlowa 61/72
+73-436 Pabianice
 =================
 
 Metoda zwracająca numer budynku - building_number(): 
-95
+53
 =================
 
 Metoda zwracająca nazwę miasta - city():
-Marki
+Mińsk Mazowiecki
 =================
 
 Metoda zwracająca województwo - region(): 
@@ -14502,11 +14508,11 @@ Mazowieckie
 =================
 
 Metoda zwracająca kod pocztowy - postcode(): 
-57-867
+51-702
 =================
 
 Metoda zwracająca adres ulicy - street_address(): 
-pl. Piaskowa 578
+plac Kwiatowa 03
 =================
 
 </pre>
@@ -14526,7 +14532,7 @@ pl. Piaskowa 578
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[107]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Metoda zwracająca pełen profil osoby - profile(): &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
@@ -14567,28 +14573,28 @@ pl. Piaskowa 578
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Metoda zwracająca pełen profil osoby - profile(): 
 
-{&#39;job&#39;: &#39;Technik weterynarii&#39;, &#39;company&#39;: &#39;FPUH Gierasimiuk&#39;, &#39;ssn&#39;: &#39;10280383681&#39;, &#39;residence&#39;: &#39;ulica Truskawkowa 16/77\n34-236 Świętochłowice&#39;, &#39;current_location&#39;: (Decimal(&#39;35.861166&#39;), Decimal(&#39;-3.116952&#39;)), &#39;blood_group&#39;: &#39;AB-&#39;, &#39;website&#39;: [&#39;http://www.postawa.pl/&#39;, &#39;https://www.spoldzielnia.pl/&#39;, &#39;https://wisz.com/&#39;, &#39;http://www.gabinety.pl/&#39;], &#39;username&#39;: &#39;kotlarekolga&#39;, &#39;name&#39;: &#39;Maciej Marciniszyn&#39;, &#39;sex&#39;: &#39;F&#39;, &#39;address&#39;: &#39;ulica Stycznia 789\n18-254 Lubin&#39;, &#39;mail&#39;: &#39;rawamalwina@gmail.com&#39;, &#39;birthdate&#39;: datetime.date(1992, 10, 15)}
+{&#39;job&#39;: &#39;Redaktor naukowy&#39;, &#39;company&#39;: &#39;FPUH Sładek-Klorek Sp.j.&#39;, &#39;ssn&#39;: &#39;99031679381&#39;, &#39;residence&#39;: &#39;aleja Krasińskiego 352\n18-220 Nowy Targ&#39;, &#39;current_location&#39;: (Decimal(&#39;-55.032441&#39;), Decimal(&#39;-121.416194&#39;)), &#39;blood_group&#39;: &#39;O+&#39;, &#39;website&#39;: [&#39;http://www.stowarzyszenie.pl/&#39;, &#39;http://doroz.com/&#39;, &#39;https://kopala-szambelan.pl/&#39;, &#39;http://ppuh.com/&#39;], &#39;username&#39;: &#39;ida24&#39;, &#39;name&#39;: &#39;pan Dawid Irla&#39;, &#39;sex&#39;: &#39;F&#39;, &#39;address&#39;: &#39;al. Osiedlowa 89/07\n55-370 Łomża&#39;, &#39;mail&#39;: &#39;norbert45@yahoo.com&#39;, &#39;birthdate&#39;: datetime.date(1950, 6, 25)}
 
 =====================
 
 
 Metoda zwracająca częściowy profil osoby - simple_profile(): 
 
-{&#39;username&#39;: &#39;cezary23&#39;, &#39;name&#39;: &#39;Krystian Kołodziejak&#39;, &#39;sex&#39;: &#39;M&#39;, &#39;address&#39;: &#39;ul. Lipowa 36/81\n19-692 Otwock&#39;, &#39;mail&#39;: &#39;julianhyjek@onet.pl&#39;, &#39;birthdate&#39;: datetime.date(1981, 12, 6)}
+{&#39;username&#39;: &#39;stylus&#39;, &#39;name&#39;: &#39;Krystyna Mytnik&#39;, &#39;sex&#39;: &#39;M&#39;, &#39;address&#39;: &#39;aleja Dębowa 47/39\n95-440 Rybnik&#39;, &#39;mail&#39;: &#39;pzadora@hotmail.com&#39;, &#39;birthdate&#39;: datetime.date(1981, 9, 25)}
 
 =====================
 
 
 Metoda zwracająca pełen profil osoby - profile(): - z uwzględnieniem lokalizacji: 
 
-{&#39;job&#39;: &#39;Сапожник&#39;, &#39;company&#39;: &#39;РКЦ Прогресс&#39;, &#39;ssn&#39;: &#39;097126268502&#39;, &#39;residence&#39;: &#39;ст. Шадринск, ш. Горняцкое, д. 1/7, 220507&#39;, &#39;current_location&#39;: (Decimal(&#39;-24.988718&#39;), Decimal(&#39;-173.319139&#39;)), &#39;blood_group&#39;: &#39;A+&#39;, &#39;website&#39;: [&#39;https://npo.edu/&#39;, &#39;https://www.kornilova.net/&#39;], &#39;username&#39;: &#39;valentina_51&#39;, &#39;name&#39;: &#39;Любовь Богдановна Рогова&#39;, &#39;sex&#39;: &#39;F&#39;, &#39;address&#39;: &#39;клх Ачхой Мартан, ш. Шахтерское, д. 6 к. 5/8, 435282&#39;, &#39;mail&#39;: &#39;seliverstovasinklitikija@rambler.ru&#39;, &#39;birthdate&#39;: datetime.date(2004, 9, 19)}
+{&#39;job&#39;: &#39;IT technical support officer&#39;, &#39;company&#39;: &#39;Boccaccio e figli&#39;, &#39;ssn&#39;: &#39;TIDYBM98R30A735J&#39;, &#39;residence&#39;: &#39;Contrada Trebbi 219 Appartamento 22\nSettimo Iolanda a mare, 83499 Alessandria (CN)&#39;, &#39;current_location&#39;: (Decimal(&#39;29.4558985&#39;), Decimal(&#39;-58.035847&#39;)), &#39;blood_group&#39;: &#39;B-&#39;, &#39;website&#39;: [&#39;http://www.ariosto.net/&#39;, &#39;http://www.toselli.com/&#39;, &#39;http://www.borsiere-crespi.it/&#39;], &#39;username&#39;: &#39;mauro05&#39;, &#39;name&#39;: &#39;Dott. Iolanda Farinelli&#39;, &#39;sex&#39;: &#39;F&#39;, &#39;address&#39;: &#34;Vicolo Alessandro 6 Appartamento 39\nAngelo nell&#39;emilia, 22536 Grosseto (OG)&#34;, &#39;mail&#39;: &#39;rdallara@tiscali.it&#39;, &#39;birthdate&#39;: datetime.date(1909, 2, 13)}
 
 =====================
 
 
 Metoda zwracająca częściowy profil osoby - simple_profile(): - z uwzględnieniem lokalizacji: 
 
-{&#39;username&#39;: &#39;rodion_1999&#39;, &#39;name&#39;: &#39;Моисеева Евпраксия Леоновна&#39;, &#39;sex&#39;: &#39;F&#39;, &#39;address&#39;: &#39;д. Боровск, пр. Микрорайон, д. 60 к. 770, 901339&#39;, &#39;mail&#39;: &#39;gennadiershov@yandex.ru&#39;, &#39;birthdate&#39;: datetime.date(2009, 7, 6)}
+{&#39;username&#39;: &#39;carlopanatta&#39;, &#39;name&#39;: &#39;Mariana Tanzini&#39;, &#39;sex&#39;: &#39;F&#39;, &#39;address&#39;: &#34;Strada Passalacqua 08\nCilea nell&#39;emilia, 80333 Rieti (TA)&#34;, &#39;mail&#39;: &#39;nstucchi@hotmail.com&#39;, &#39;birthdate&#39;: datetime.date(2015, 12, 8)}
 </pre>
 </div>
 </div>
@@ -14603,10 +14609,10 @@ Metoda zwracająca częściowy profil osoby - simple_profile(): - z uwzględnien
 <h2 id="1.4.-faker.providers.python">1.4. <code>faker.providers.python</code><a class="anchor-link" href="#1.4.-faker.providers.python">&#182;</a></h2><p><strong>Pełen opis metod tego <em>dostawcy</em> można znaleźć pod adresem:</strong> <a href="https://faker.readthedocs.io/en/master/providers/faker.providers.python.html">faker.readthedocs.io/en/master/providers/faker.providers.python</a></p>
 
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
@@ -14618,10 +14624,30 @@ Metoda zwracająca częściowy profil osoby - simple_profile(): - z uwzględnien
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>False | False | True | False | True | False | False | False | True | False | </pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[156]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Metoda zwracająca losową wartość typu Bool - pybool(): &quot;</span><span class="p">)</span>
@@ -14674,72 +14700,72 @@ Metoda zwracająca częściowy profil osoby - simple_profile(): - z uwzględnien
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>Metoda zwracająca losową wartość typu Bool - pybool(): 
-True | True | False | False | True | False | False | False | True | True | 
+True | False | True | True | True | False | False | False | True | False | 
 =================
 
 
 Metoda zwracająca losową liczbe typu Decimal - pydecimal(): 
-4975.66 | 7273.94 | 896.36 | 4691.71 | 1407.3 | 7069.18 | 17.35 | -1036.9 | -506.18 | -2994.19 | 
+726.14 | -409.4 | 2789.98 | -9563.42 | 6431.74 | 9785.63 | -6425.54 | 7198.95 | 887.59 | 210.69 | 
 =================
 
 
 Metoda zwracająca losowy słownik - pydict():
-{&#39;city&#39;: 7070}
-{&#39;summer&#39;: &#39;hVvyxwALmklfMgfiqpAP&#39;, &#39;wide&#39;: &#39;plMTSGufcxRVYblRgjxz&#39;, &#39;boy&#39;: &#39;BDRjhSFilDOQHQySSolh&#39;}
-{&#39;guy&#39;: 79.2726340755849, &#39;owner&#39;: &#39;bkouYKmwwclpQyozCHUq&#39;, &#39;remember&#39;: 9309, &#39;dream&#39;: 6668483001788.46}
-{&#39;win&#39;: &#39;cBhEGrDVhHKCcpEXYNjL&#39;}
-{&#39;ok&#39;: 5744, &#39;rather&#39;: 64069385294.1511, &#39;chair&#39;: -88292276.401982}
-{&#39;situation&#39;: 7727, &#39;talk&#39;: &#39;FPGENthavmdKkdDUMkMs&#39;}
-{&#39;away&#39;: -6.99188438877765, &#39;offer&#39;: -3462633419.15102, &#39;state&#39;: -3.2341688932837}
-{&#39;note&#39;: -3280369866056.14, &#39;agreement&#39;: 6277}
-{&#39;speak&#39;: 8677, &#39;life&#39;: &#39;LsOMTsgJuTUssPpDxYED&#39;, &#39;near&#39;: 44709.9541755627}
-{&#39;factor&#39;: 9722, &#39;second&#39;: &#39;cwyBTWZMGpWlfpfQWosp&#39;, &#39;ball&#39;: &#39;IALuEryNbNqsWFrTYVmx&#39;, &#39;candidate&#39;: &#39;PNmVYqCJmnyxESQoKiBh&#39;}
+{&#39;for&#39;: 6502, &#39;discover&#39;: -865.568447285551, &#39;two&#39;: -1721395584281.72}
+{&#39;include&#39;: 3239, &#39;that&#39;: &#39;HpsgYPOompOAMTqvRUQh&#39;, &#39;movie&#39;: -5402.19437741622}
+{&#39;worry&#39;: 9857, &#39;wait&#39;: &#39;MLFHHpTimvQsCZBcWOIL&#39;}
+{&#39;recognize&#39;: &#39;LgXEfgZpCzarsiQtzazI&#39;, &#39;next&#39;: 1318}
+{&#39;wrong&#39;: -94374.5263709697, &#39;even&#39;: &#39;gxldMEdsYNpzIrhYCsva&#39;}
+{&#39;job&#39;: 66897477912.1764, &#39;break&#39;: &#39;bvWLBsfZAzqZSUXOIexl&#39;}
+{&#39;citizen&#39;: 1973, &#39;wait&#39;: &#39;lNYtDHHDVbbaMDRiiBKp&#39;}
+{&#39;million&#39;: 6964, &#39;strong&#39;: -260774782.141745}
+{&#39;try&#39;: &#39;cTheqygMIpEGsOGQqJav&#39;, &#39;industry&#39;: -84356163.3482929, &#39;seat&#39;: 6075}
+{&#39;dinner&#39;: 733729741.807548, &#39;other&#39;: -23724564622.4988, &#39;those&#39;: 98255.7171405643}
 
 =================
 
 
 Metoda zwracająca losową listę - pylist():
-[&#39;MtZkcmqpdnuCXKZbPRdp&#39;, &#39;dRpgoLhmkHihuHTJtvAh&#39;]
-[&#39;sqxCUzNGXOBibQjyCvEs&#39;, &#39;ybVvQjgJCczfBkiWVMJb&#39;]
-[75373550.929081, &#39;hxxerCDzRVWVtJHCpRDg&#39;]
-[&#39;wgNfWSQDGOODNdCPXrkq&#39;, -5.8146130899428]
-[-5440729544402.64, -20119.8518611701]
-[&#39;elEQGUEmDQxDzWfmHTAx&#39;]
-[&#39;QutcnyvtNghPgZBWwbAR&#39;]
-[-644224014961.605]
-[-82664193846.7876]
-[58002.955136161]
+[-45099212518.4141, -282629355086.91]
+[98821476.808013]
+[752.422572170274]
+[-54918550.420492]
+[533360.11667287, 2737033166061.22]
+[45111534199.1362]
+[&#39;vOGyqhvAQBMmqNymWakx&#39;]
+[-83883366.4538538]
+[62.7196864815501, &#39;MCkWMUKqAPqlknNGqSmf&#39;]
+[-0.84984071689934, 39256.1188391665]
 
 =================
 
 
 Metoda zwracająca losowy ciąg znaków - pystr():
-yRZrtMiBBYWXLFIxuDnl
-BxglSelkjHiXuwbSgXjx
-SDMdoWPQhTSHepxgWlRq
-qOamiQNUoxBLywSGDizh
-saYHPxzxgyFypjStAjly
-FyKOlVsyBrNWYvFfcPCj
-ooMgFhfypveQGDiPtObf
-smQQLDuDeYNTdkVmbbaf
-ntznEjhiDVFnsDOmUBXy
-tXFySoYkWwKstaXmUUAh
+NyqryzsUKWHYpHJjVPMb
+MWherGJqIEBsAlODhqmG
+mGddlaAWdjsaIutVQpqS
+FHGsJDIjlOSuBPTkApKf
+IBZJPsRDpCqFntfxNwke
+CGKnSkIjNDnxCUNTguST
+vapzVuIpgAKVbpxIcREd
+oWOVhKUKboSQscITbARt
+NNIaorTIyEpyfChzWjmx
+SqYMjWdKZHscHtRCdwTK
 
 =================
 
 
 Metoda zwracająca losowy ciąg znaków według zadanego wzorca - pystr_format(): 
 gdzie: ? - reprezentuje dowonlą literę, natomiast # - liczbę
-dn__1hW1-y65-IJ-3650-TEST_2606J
-Vz__6Zp4-F79-YP-2683-TEST_8566V
-Wf__5mJ1-p23-VL-1230-TEST_4356r
-PE__5Nc0-e88-zJ-2372-TEST_3808m
-HP__2Fy3-c82-lj-6044-TEST_8546C
-Li__7px8-t10-jQ-8975-TEST_1120R
-AB__5MF5-h25-kH-9625-TEST_5597z
-dO__5nW4-a95-BI-5810-TEST_3826o
-dL__9Dn1-K00-tV-3422-TEST_8530y
-VL__1oe1-n71-Kh-2432-TEST_3020Q
+PZ__0La5-t43-nx-5953-TEST_3736k
+tU__8vF0-s37-zR-8344-TEST_650p
+Ar__5fR9-Z58-gA-0882-TEST_1761c
+Lx__0zc2-M88-xz-7220-TEST_6276q
+uZ__1JK8-r06-OI-3666-TEST_6679m
+Am__0gC1-J00-PW-8305-TEST_8297E
+VA__1Cr0-l87-yy-3722-TEST_7207g
+Rv__2nM4-K53-gU-7543-TEST_9620w
+vV__7of8-t97-Uh-2666-TEST_5610Z
+ks__8hs7-k56-Gm-2104-TEST_7144s
 
 =================
 
@@ -14755,37 +14781,40 @@ VL__1oe1-n71-Kh-2432-TEST_3020Q
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr>
 <h2 id="List%C4%99-pozosta%C5%82ych-dostawc%C3%B3w-mo%C5%BCna-sprawdzi%C4%87-w-dokumentacji:-faker.readthedocs.io/en/master/providers">List&#281; pozosta&#322;ych <em>dostawc&#243;w</em> mo&#380;na sprawdzi&#263; w dokumentacji: <a href="https://faker.readthedocs.io/en/master/providers.html">faker.readthedocs.io/en/master/providers</a><a class="anchor-link" href="#List%C4%99-pozosta%C5%82ych-dostawc%C3%B3w-mo%C5%BCna-sprawdzi%C4%87-w-dokumentacji:-faker.readthedocs.io/en/master/providers">&#182;</a></h2><hr>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="//TODO-DODA%C4%86-PAR%C4%98-FUNKCJI-Z-COMMUNITY-PROVIDERS">//TODO DODA&#262; PAR&#280; FUNKCJI Z COMMUNITY PROVIDERS<a class="anchor-link" href="#//TODO-DODA%C4%86-PAR%C4%98-FUNKCJI-Z-COMMUNITY-PROVIDERS">&#182;</a></h1>
+<h1 id="Bibiioteki-community-providers">Bibiioteki community providers<a class="anchor-link" href="#Bibiioteki-community-providers">&#182;</a></h1><p>Najpopularniejsze bibliotek utworzone przez społeczność to:</p>
+<ul>
+<li><code>Airtravel</code> - nazwy oraz kody lotnisk oraz loty</li>
+<li><code>Music</code> - Gatunki muzyczne, podgatunki i instrumenty.</li>
+<li><code>Posts</code> - różnego rodzaju posty w formacie .md</li>
+<li><code>Vehicle</code> - fałszywe informacje na temat pojazdów takie jak: rok, model, marka</li>
+<li><code>WebProvider</code> - Dane związane z siecią, takie jak typ MIME i wersje serwera sieci Web.\</li>
+<li><code>Credit Score</code> - dane służące do oceny ryzyka kredytowego</li>
+<li><code>Mircoservice</code> - nazwy dla mikroserwsów</li>
+</ul>
+<p><strong>Aby skorzystać z biblioteki stworzonej przez społeczność musimy najpierw ją zainstalować:</strong></p>
+<p><code>pip install faker_airtravel</code></p>
+<p><strong>a następnie zaimportować:</strong></p>
+<p><code>from faker_airtravel import AirTravelProvider</code></p>
+
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="//TODO-POKAZA%C4%86-ZAPIS-DO-BAZY-DANYCH-I-PLIKU-CSV(B%C4%84D%C5%B9-INNEGO)">//TODO POKAZA&#262; ZAPIS DO BAZY DANYCH I PLIKU CSV(B&#260;D&#377; INNEGO)<a class="anchor-link" href="#//TODO-POKAZA%C4%86-ZAPIS-DO-BAZY-DANYCH-I-PLIKU-CSV(B%C4%84D%C5%B9-INNEGO)">&#182;</a></h1>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="//TODO-POKAZA%C4%86-ZMIAN%C4%98-ZIARNA---.seed()">//TODO POKAZA&#262; ZMIAN&#280; ZIARNA - .seed()<a class="anchor-link" href="#//TODO-POKAZA%C4%86-ZMIAN%C4%98-ZIARNA---.seed()">&#182;</a></h1>
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="//TODO-POKAZA%C4%86-DODAWANIE-W%C5%81ASNEGO-PROVIDERA">//TODO POKAZA&#262; DODAWANIE W&#321;ASNEGO PROVIDERA<a class="anchor-link" href="#//TODO-POKAZA%C4%86-DODAWANIE-W%C5%81ASNEGO-PROVIDERA">&#182;</a></h1>
+<h3 id="Import-biblioteki-z-modu%C5%82u-Comunity">Import biblioteki z modu&#322;u <code>Comunity</code><a class="anchor-link" href="#Import-biblioteki-z-modu%C5%82u-Comunity">&#182;</a></h3>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">faker_airtravel</span> <span class="kn">import</span> <span class="n">AirTravelProvider</span>
 </pre></div>
 
      </div>
@@ -14796,7 +14825,958 @@ VL__1oe1-n71-Kh-2432-TEST_3020Q
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Za pomocą metody <code>add_provider(Provider)</code> dodajemy <em>dostawcę</em> przygotowanego przez społeczność i uprzednio zaimportowanego, do naszej głównej instancji biblioteki <code>Faker</code>.Innymi słowy za pomocą tej metody <strong>rejestrujemy nowych dostawców</strong>. Od tego momentu z poziomu instancji <code>fake</code> możemy korzystać z metod dostarczonych przez nowego <em>dostawcę</em>.</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fake</span><span class="o">.</span><span class="n">add_provider</span><span class="p">(</span><span class="n">AirTravelProvider</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Wywo%C5%82anie-przyk%C5%82adowej-metody:">Wywo&#322;anie przyk&#322;adowej metody:<a class="anchor-link" href="#Wywo%C5%82anie-przyk%C5%82adowej-metody:">&#182;</a></h3>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fake</span><span class="o">.</span><span class="n">airport_object</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{&#39;airport&#39;: &#39;Ministro Pistarini International airport&#39;,
+ &#39;iata&#39;: &#39;EZE&#39;,
+ &#39;icao&#39;: &#39;SAEZ&#39;,
+ &#39;city&#39;: &#39;Ezeiza&#39;,
+ &#39;state&#39;: &#39;Buenos Aires&#39;,
+ &#39;country&#39;: &#39;Argentina&#39;}</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">fake</span><span class="o">.</span><span class="n">airport_object</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="s2">&quot;airport&quot;</span><span class="p">])</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Indira Gandhi International airport
+Norfolk International airport
+Ingeniero Ambrosio L.V. Taravella International 
+Fuzhou airport
+Zia International airport Dhaka
+Baiyun airport
+Balice airport
+William P Hobby airport
+Stuttgart airport
+Bodo airport
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Losowy-kod-lotniska-(International-Air-Transport-Association)">Losowy kod lotniska (International Air Transport Association)<a class="anchor-link" href="#Losowy-kod-lotniska-(International-Air-Transport-Association)">&#182;</a></h3>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">fake</span><span class="o">.</span><span class="n">airport_iata</span><span class="p">())</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>ABQ
+ZCO
+FTE
+HER
+FLL
+SEA
+CAN
+BGY
+SKG
+DGA
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Losowa-nazwa-lotniska-(International-Air-Transport-Association)">Losowa nazwa lotniska (International Air Transport Association)<a class="anchor-link" href="#Losowa-nazwa-lotniska-(International-Air-Transport-Association)">&#182;</a></h3>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">fake</span><span class="o">.</span><span class="n">airport_name</span><span class="p">())</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Cap C Martinez de Pinillos airport
+Pune airport
+Tromso Langnes airport
+Denver International airport
+Alicante airport
+El Plumerillo airport
+Orlando International airport
+Glasgow International airport
+London Stansted International airport
+Zagreb airport
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Losowy-lot">Losowy lot<a class="anchor-link" href="#Losowy-lot">&#182;</a></h3>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fake</span><span class="o">.</span><span class="n">flight</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>{&#39;airline&#39;: &#39;Nok Air&#39;,
+ &#39;origin&#39;: {&#39;airport&#39;: &#39;King Abdul Aziz International airport&#39;,
+  &#39;iata&#39;: &#39;JED&#39;,
+  &#39;icao&#39;: &#39;OEJN&#39;,
+  &#39;city&#39;: &#39;Jeddah&#39;,
+  &#39;state&#39;: &#39;Makka&#39;,
+  &#39;country&#39;: &#39;Saudi Arabia&#39;},
+ &#39;destination&#39;: {&#39;airport&#39;: &#39;Abu Dhabi International airport&#39;,
+  &#39;iata&#39;: &#39;AUH&#39;,
+  &#39;icao&#39;: &#39;OMAA&#39;,
+  &#39;city&#39;: &#39;Abu Dhabi&#39;,
+  &#39;state&#39;: &#39;Abu Dhabi&#39;,
+  &#39;country&#39;: &#39;United Arab Emirates&#39;},
+ &#39;stops&#39;: &#39;non-stop&#39;,
+ &#39;price&#39;: 203}</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+<h2 id="List%C4%99-pozosta%C5%82ych-dostawc%C3%B3w-spo%C5%82eczno%C5%9Bci-mo%C5%BCna-sprawdzi%C4%87-w-dokumentacji:-faker.readthedocs.io/en/master/communityproviders">List&#281; pozosta&#322;ych <em>dostawc&#243;w spo&#322;eczno&#347;ci</em> mo&#380;na sprawdzi&#263; w dokumentacji: <a href="https://faker.readthedocs.io/en/master/communityproviders.html#">faker.readthedocs.io/en/master/communityproviders</a><a class="anchor-link" href="#List%C4%99-pozosta%C5%82ych-dostawc%C3%B3w-spo%C5%82eczno%C5%9Bci-mo%C5%BCna-sprawdzi%C4%87-w-dokumentacji:-faker.readthedocs.io/en/master/communityproviders">&#182;</a></h2><hr>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Zastosowania-biblioteki-Faker-w-przyk%C5%82adach:">Zastosowania biblioteki <code>Faker</code> w przyk&#322;adach:<a class="anchor-link" href="#Zastosowania-biblioteki-Faker-w-przyk%C5%82adach:">&#182;</a></h1>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Zapis-losowych-danych-do-pliku-CSV:">Zapis losowych danych do pliku CSV:<a class="anchor-link" href="#Zapis-losowych-danych-do-pliku-CSV:">&#182;</a></h2>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Program-tworz%C4%85cy-plik-csv-z-losowymi-danymi---generuje-list%C4%99-losowych-os%C3%B3b-wraz-z-miastem-oraz-krajem-i-pozwala-na-stworzenie-na-tej-podstawie-arkusza-CSV.-Pozwala-on-r%C3%B3wnie%C5%BC-na-wybranie-liczby-rekord%C3%B3w-maj%C4%85cych-znale%C5%BA%C4%87-si%C4%99-w-pliku-wynikowym.">Program tworz&#261;cy plik csv z losowymi danymi - generuje list&#281; losowych os&#243;b wraz z miastem oraz krajem i pozwala na stworzenie na tej podstawie arkusza <em>CSV</em>. Pozwala on r&#243;wnie&#380; na wybranie liczby rekord&#243;w maj&#261;cych znale&#378;&#263; si&#281; w pliku wynikowym.<a class="anchor-link" href="#Program-tworz%C4%85cy-plik-csv-z-losowymi-danymi---generuje-list%C4%99-losowych-os%C3%B3b-wraz-z-miastem-oraz-krajem-i-pozwala-na-stworzenie-na-tej-podstawie-arkusza-CSV.-Pozwala-on-r%C3%B3wnie%C5%BC-na-wybranie-liczby-rekord%C3%B3w-maj%C4%85cych-znale%C5%BA%C4%87-si%C4%99-w-pliku-wynikowym.">&#182;</a></h3>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">CSV_FILE_NAME</span> <span class="o">=</span> <span class="s2">&quot;test.csv&quot;</span>      
+<span class="n">CSV_COLUMN_NAMES</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;names&quot;</span><span class="p">,</span> <span class="s2">&quot;surname&quot;</span><span class="p">,</span> <span class="s2">&quot;land&quot;</span><span class="p">,</span> <span class="s2">&quot;city&quot;</span><span class="p">]</span>
+<span class="n">CSV_HOW_MANY_ITEM</span> <span class="o">=</span> <span class="mi">100</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">faker</span> <span class="kn">import</span> <span class="n">Faker</span>
+
+<span class="n">fake</span> <span class="o">=</span> <span class="n">Faker</span><span class="p">()</span>
+
+
+<span class="k">class</span> <span class="nc">csv_creator</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cols</span><span class="p">,</span> <span class="n">numbers_of_rows</span><span class="p">,</span> <span class="n">separator</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">column_names</span> <span class="o">=</span> <span class="n">cols</span><span class="p">,</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">numbers_of_rows</span> <span class="o">=</span> <span class="n">numbers_of_rows</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">separator</span> <span class="o">=</span> <span class="n">separator</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">csv_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">add_line_to_csv_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">elements</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">csv_string</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">separator</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">elements</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">create_random_csv</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">add_line_to_csv_file</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">column_names</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">csv_string</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">numbers_of_rows</span><span class="p">):</span>
+            <span class="n">row</span> <span class="o">=</span> <span class="p">[</span><span class="n">fake</span><span class="o">.</span><span class="n">first_name</span><span class="p">(),</span> <span class="n">fake</span><span class="o">.</span><span class="n">last_name</span><span class="p">(),</span> <span class="n">fake</span><span class="o">.</span><span class="n">country</span><span class="p">(),</span> <span class="n">fake</span><span class="o">.</span><span class="n">city</span><span class="p">()]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_line_to_csv_file</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">csv_string</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+            
+    <span class="k">def</span> <span class="nf">save_to_file</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+        <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">csv_string</span><span class="o">.</span><span class="n">rstrip</span><span class="p">())</span> <span class="c1">#Obcinamy zbędne znaki końca linii powodujące zapis pustej linijki do pliku.</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">csv_creator</span><span class="p">(</span><span class="n">CSV_COLUMN_NAMES</span><span class="p">,</span> <span class="n">CSV_HOW_MANY_ITEM</span><span class="p">,</span> <span class="s2">&quot;,&quot;</span><span class="p">)</span>
+<span class="n">x</span><span class="o">.</span><span class="n">create_random_csv</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">csv_string</span><span class="p">)</span>
+<span class="n">x</span><span class="o">.</span><span class="n">save_to_file</span><span class="p">(</span><span class="n">CSV_FILE_NAME</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>names,surname,land,city
+Angela,Brown,Thailand,West Scottview
+Crystal,Johnson,Malawi,Coxside
+Mary,Tucker,Mongolia,Blevinsburgh
+Lisa,Richardson,Greece,North Ashley
+Mark,Morton,Grenada,Ginabury
+Alex,Mitchell,Estonia,Brownview
+Christopher,Houston,French Polynesia,Karenstad
+William,Smith,Uganda,West Tyler
+Craig,Sullivan,Hungary,New Michael
+Shawn,Rodriguez,Trinidad and Tobago,Lake Nicole
+Robert,Santos,United States Virgin Islands,Alyssamouth
+Jacob,Flores,Liechtenstein,Jenniferfort
+Terri,Avery,Yemen,Michaelfort
+Angela,Cervantes,Moldova,West Rodneybury
+Gregory,Torres,Senegal,South Daniel
+Derek,Williams,Malaysia,Kelleystad
+James,Davis,Cook Islands,South Andrewhaven
+Katie,Butler,Vanuatu,Taylorville
+Deborah,Dawson,Rwanda,West Christopher
+Jeff,Vargas,Bahamas,Sarahside
+Ryan,Schneider,Thailand,Sethside
+Jordan,Anderson,Spain,Russellbury
+Daniel,Daugherty,Croatia,Port Angelica
+Kevin,Jones,Kiribati,Port Williamport
+John,Santiago,Namibia,New Robinberg
+Michelle,Schneider,Isle of Man,North Brandon
+Gregory,Christensen,Trinidad and Tobago,Lake Michael
+Jared,Chapman,Guadeloupe,Lake Maryborough
+Alicia,Morrison,Myanmar,South Shaneberg
+Matthew,Jordan,Heard Island and McDonald Islands,Port Stephanieview
+Donald,Deleon,Bolivia,Hinesfort
+Tammy,Casey,Hungary,South Amy
+Juan,Williams,Poland,Villahaven
+Andrea,Bush,Micronesia,East Marissaton
+Richard,Strong,Oman,Erikport
+Kendra,Nelson,Canada,North Jasonhaven
+Richard,Hernandez,Kyrgyz Republic,Port Bethchester
+Alexis,Jenkins,Sao Tome and Principe,New Wesley
+Jodi,Anderson,Nepal,Timothychester
+Mark,Bishop,Myanmar,New Marilynhaven
+Anthony,Patterson,Antigua and Barbuda,Kyleport
+Elizabeth,Coleman,Burundi,Smithchester
+David,Doyle,San Marino,Thomasberg
+Kimberly,Ramsey,Malta,Davidhaven
+Alejandro,Anderson,Algeria,New Coreybury
+David,Ross,Angola,South Warrentown
+Jessica,Johns,Congo,West Jodyberg
+Shelly,Kaufman,Mexico,South Mirandastad
+Deanna,Rogers,France,Laratown
+David,Hernandez,Brunei Darussalam,Andrewmouth
+Erica,Graves,Uruguay,Donaldtown
+Danielle,Washington,El Salvador,North Jamieburgh
+Katherine,Chandler,United Arab Emirates,Samuelhaven
+William,Kelley,France,Lake Justinmouth
+Joshua,Henderson,Macedonia,New Jessicaberg
+Robert,Potts,Bahamas,Port Jeffrey
+Kevin,Hernandez,Uzbekistan,Butlertown
+Jason,Sims,Bulgaria,West James
+Caitlyn,Frank,Greenland,Kathystad
+Alison,Smith,Papua New Guinea,Lake Emily
+Deborah,Johnson,Switzerland,Lake Nicole
+Catherine,Jordan,Peru,Jenniferland
+Karen,Lewis,Italy,South Jessica
+Jennifer,Thompson,Mauritania,Kathyville
+James,Cowan,Saint Helena,East Danielmouth
+Brenda,Harrington,Bouvet Island (Bouvetoya),Lake Cynthiaville
+Catherine,Holt,Macedonia,Morrisfort
+Jessica,Walters,France,Lake Martha
+Curtis,Maldonado,Mauritania,Tracychester
+Tracie,Torres,Guatemala,East Jeanette
+Jennifer,Hood,Kenya,Tylerfort
+Maria,Clark,Guatemala,Bradleyland
+Jennifer,Thomas,Peru,Port Carlosbury
+Jerry,Clark,Turkey,South Angelaport
+Joshua,Lam,French Southern Territories,Jonesberg
+Caleb,Simmons,Belize,Holdenhaven
+Kristin,Kelley,Micronesia,New Rachel
+Crystal,Hess,Norfolk Island,West Kimberly
+Mary,Brown,Heard Island and McDonald Islands,South Dawn
+Larry,Watts,Central African Republic,East Jonathanborough
+Christopher,Farmer,Saudi Arabia,Dorothyhaven
+Lisa,Bird,Malawi,Jeremyfort
+Richard,Burgess,Suriname,Terriview
+Tammy,Riley,Trinidad and Tobago,Thomasport
+Tiffany,Miller,Togo,West Julie
+Cassie,Klein,Croatia,New Sarahbury
+William,Tapia,Kuwait,Hannahtown
+Brian,Thornton,Ethiopia,East Malikbury
+Timothy,Evans,Tokelau,Wadeland
+Troy,Taylor,Iceland,North Brian
+Andrea,Mullen,Pitcairn Islands,New Patricia
+Kim,Barker,Saudi Arabia,Heatherhaven
+Michelle,Walsh,Seychelles,Williamtown
+Dawn,Scott,Finland,North Jonathanville
+David,Lee,Haiti,East Douglasport
+Katherine,Beck,Antigua and Barbuda,New Jason
+Sarah,Harrison,Benin,East Lori
+Andrew,Frazier,Northern Mariana Islands,Lake Rebeccastad
+Melinda,Crane,Benin,Tammyfurt
+Julie,Duncan,Maldives,Port Deanville
+
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Generator-zapyta%C5%84-SQL-wstawiaj%C4%85cy-losowe-dane-do-podanej-przez-nas-tabeli">Generator zapyta&#324; SQL wstawiaj&#261;cy losowe dane do podanej przez nas tabeli<a class="anchor-link" href="#Generator-zapyta%C5%84-SQL-wstawiaj%C4%85cy-losowe-dane-do-podanej-przez-nas-tabeli">&#182;</a></h2>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Program-pozwalaj%C4%85cy-na-stworzenie-poprawnego-zapytania-SQL-INSERT,-z-losowo-wygenerowanymi-danymi.-U%C5%BCytkownik-mo%C5%BCe-sterowa%C4%87-takimi-parametrami-jak:">Program pozwalaj&#261;cy na stworzenie poprawnego zapytania SQL <code>INSERT</code>, z losowo wygenerowanymi danymi. U&#380;ytkownik mo&#380;e sterowa&#263; takimi parametrami jak:<a class="anchor-link" href="#Program-pozwalaj%C4%85cy-na-stworzenie-poprawnego-zapytania-SQL-INSERT,-z-losowo-wygenerowanymi-danymi.-U%C5%BCytkownik-mo%C5%BCe-sterowa%C4%87-takimi-parametrami-jak:">&#182;</a></h3><h4 id="1.-Nazwa-tabeli-do-kt%C3%B3rej-chce-wstawi%C4%87-dane-(zmiennaTABLE_NAME),">1. Nazwa tabeli do kt&#243;rej chce wstawi&#263; dane (zmienna<code>TABLE_NAME</code>),<a class="anchor-link" href="#1.-Nazwa-tabeli-do-kt%C3%B3rej-chce-wstawi%C4%87-dane-(zmiennaTABLE_NAME),">&#182;</a></h4><h4 id="2.-Ilo%C5%9B%C4%87-rekord%C3%B3w-kt%C3%B3re-chce-wstawi%C4%87-do-danej-tabeli-(zmienna-SQL_HOW_MANY_VALUES),">2. Ilo&#347;&#263; rekord&#243;w kt&#243;re chce wstawi&#263; do danej tabeli (zmienna <code>SQL_HOW_MANY_VALUES</code>),<a class="anchor-link" href="#2.-Ilo%C5%9B%C4%87-rekord%C3%B3w-kt%C3%B3re-chce-wstawi%C4%87-do-danej-tabeli-(zmienna-SQL_HOW_MANY_VALUES),">&#182;</a></h4><h4 id="3.-Nazwy-kolumn-w-tabeli-w-formie-listy-(zmienna-COLUMNS),">3. Nazwy kolumn w tabeli w formie listy (zmienna <code>COLUMNS</code>),<a class="anchor-link" href="#3.-Nazwy-kolumn-w-tabeli-w-formie-listy-(zmienna-COLUMNS),">&#182;</a></h4><h4 id="4.-Nazwa-pliku-w-kt%C3%B3rym-chcemy-zapisa%C4%87-nasze-zapytanie-(zmienna-FILE_NAME).">4. Nazwa pliku w kt&#243;rym chcemy zapisa&#263; nasze zapytanie (zmienna <code>FILE_NAME</code>).<a class="anchor-link" href="#4.-Nazwa-pliku-w-kt%C3%B3rym-chcemy-zapisa%C4%87-nasze-zapytanie-(zmienna-FILE_NAME).">&#182;</a></h4>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[167]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">TABLE_NAME</span> <span class="o">=</span> <span class="s2">&quot;test_table&quot;</span>   
+<span class="n">SQL_HOW_MANY_VALUES</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">COLUMNS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Username&#39;</span><span class="p">,</span> <span class="s2">&quot;Name&quot;</span><span class="p">,</span> <span class="s2">&quot;AdDress&quot;</span><span class="p">,</span> <span class="s2">&quot;Email&quot;</span><span class="p">,</span> <span class="s2">&quot;Phone Number&quot;</span><span class="p">]</span>  
+<span class="n">FILE_NAME</span> <span class="o">=</span> <span class="s2">&quot;test_query.sql&quot;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[168]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">create_sql_insert_query</span><span class="p">(</span><span class="n">TABLE_NAME</span><span class="p">,</span> <span class="n">COLUMNS</span><span class="p">,</span> <span class="n">NUM_OF_ITERATION</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Funkcja pozwalająca na stworzenie poprawnego zapytania INSERT z losowymi wartościami</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">values</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">NUM_OF_ITERATION</span><span class="p">):</span>
+        <span class="n">values</span><span class="o">.</span><span class="n">append</span><span class="p">([</span>
+                <span class="n">polish_localized_faker</span><span class="o">.</span><span class="n">simple_profile</span><span class="p">()[</span><span class="s1">&#39;username&#39;</span><span class="p">],</span>
+                <span class="n">polish_localized_faker</span><span class="o">.</span><span class="n">simple_profile</span><span class="p">()[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span>
+                <span class="n">polish_localized_faker</span><span class="o">.</span><span class="n">simple_profile</span><span class="p">()[</span><span class="s1">&#39;address&#39;</span><span class="p">],</span>
+                <span class="n">polish_localized_faker</span><span class="o">.</span><span class="n">simple_profile</span><span class="p">()[</span><span class="s1">&#39;mail&#39;</span><span class="p">],</span>
+                <span class="n">polish_localized_faker</span><span class="o">.</span><span class="n">phone_number</span><span class="p">()</span>
+        <span class="p">])</span>
+
+    <span class="n">connected_values</span> <span class="o">=</span> <span class="p">[]</span>  
+    <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+        <span class="n">connected_values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;(&quot;&#39;</span> <span class="o">+</span> <span class="s1">&#39;&quot;,&quot;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">value</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;&quot;)&#39;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;INSERT INTO `</span><span class="si">{</span><span class="n">TABLE_NAME</span><span class="si">}</span><span class="s2">` (</span><span class="si">{</span><span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">COLUMNS</span><span class="p">)</span><span class="si">}</span><span class="s2">) VALUES </span><span class="si">{</span><span class="s1">&#39;,&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">connected_values</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[169]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">save_sql_query_to_file</span><span class="p">(</span><span class="n">FILE_NAME</span><span class="p">,</span> <span class="n">sql_query</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Funkcja zapisująca zapytanie SQL do pliku</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">FILE_NAME</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">sql_query</span><span class="p">)</span> <span class="c1">#Obcinamy zbędne znaki końca linii powodujące zapis pustej linijki do pliku.</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[170]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">query_string</span> <span class="o">=</span> <span class="n">create_sql_insert_query</span><span class="p">(</span><span class="n">TABLE_NAME</span><span class="p">,</span> <span class="n">COLUMNS</span><span class="p">,</span> <span class="n">SQL_HOW_MANY_VALUES</span><span class="p">)</span>
+<span class="n">save_sql_query_to_file</span><span class="p">(</span><span class="n">FILE_NAME</span><span class="p">,</span> <span class="n">query_string</span><span class="p">)</span>
+<span class="n">query_string</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[170]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&#39;INSERT INTO `test_table` (Username, Name, AdDress, Email, Phone Number) VALUES (&#34;zwichary&#34;,&#34;Paweł Krüger&#34;,&#34;aleja Królewska 90/99\n85-748 Nowa Ruda&#34;,&#34;danielkazberuk@gmail.com&#34;,&#34;+48 22 755 54 55&#34;),(&#34;sebastian26&#34;,&#34;Andrzej Sudnik&#34;,&#34;aleja Fabryczna 70\n29-204 Tarnobrzeg&#34;,&#34;drozdzaljacek@hotmail.com&#34;,&#34;881 917 235&#34;),(&#34;wypchlomikolaj&#34;,&#34;Nicole Radke&#34;,&#34;pl. Piastowska 68\n10-101 Kwidzyn&#34;,&#34;umaszczyk@onet.pl&#34;,&#34;574 488 734&#34;),(&#34;marikalinek&#34;,&#34;pan Cyprian Ryguła&#34;,&#34;plac Kazimierza Wielkiego 925\n33-179 Sosnowiec&#34;,&#34;franciszekwendt@gmail.com&#34;,&#34;+48 734 006 329&#34;),(&#34;ingabialous&#34;,&#34;Mieszko Trybus&#34;,&#34;ulica Zielna 705\n24-666 Wyszków&#34;,&#34;lkochman@onet.pl&#34;,&#34;697 203 806&#34;),(&#34;sebastian78&#34;,&#34;Jerzy Subocz&#34;,&#34;plac Koralowa 95/45\n19-063 Malbork&#34;,&#34;anna-mariadawidczyk@onet.pl&#34;,&#34;+48 32 571 01 75&#34;),(&#34;holbrych&#34;,&#34;pani Karina Pniak&#34;,&#34;aleja Młynarska 35\n34-665 Żory&#34;,&#34;kijankamarcin@yahoo.com&#34;,&#34;602 756 623&#34;),(&#34;stefankarol&#34;,&#34;pan Karol Łosiewicz&#34;,&#34;aleja Myśliwska 96\n88-593 Kraśnik&#34;,&#34;ipawlukiewicz@o2.pl&#34;,&#34;+48 720 459 094&#34;),(&#34;natandabal&#34;,&#34;Lidia Cabała&#34;,&#34;aleja Stefana Batorego 76\n08-237 Ruda Śląska&#34;,&#34;warwasaniela@onet.pl&#34;,&#34;+48 724 380 497&#34;),(&#34;starostkaiwo&#34;,&#34;Marcin Kafel&#34;,&#34;aleja Letnia 496\n36-120 Ruda Śląska&#34;,&#34;jerzy64@onet.pl&#34;,&#34;791 883 002&#34;)&#39;</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Generator-hase%C5%82-losowych:">Generator hase&#322; losowych:<a class="anchor-link" href="#Generator-hase%C5%82-losowych:">&#182;</a></h2>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Program-pozwalaj%C4%85cy-na-wygenerowanie-okre%C5%9Blonej-przez-u%C5%BCytkownika-liczby-losowych-hase%C5%82.-U%C5%BCytkownik-r%C3%B3wnie%C5%BC-mo%C5%BCe-poda%C4%87-minimaln%C4%85-oraz-maksymaln%C4%85-d%C5%82ugo%C5%9B%C4%87-pojedynczego-has%C5%82a.-Wyniki-dostajemy-w-postaci-tablicy-w-k%C3%B3trej-ka%C5%BCdy-rekord-stanowi-jedno-wygenerowane-przez-program-has%C5%82o.">Program pozwalaj&#261;cy na wygenerowanie okre&#347;lonej przez u&#380;ytkownika liczby losowych hase&#322;. U&#380;ytkownik r&#243;wnie&#380; mo&#380;e poda&#263; <em>minimaln&#261;</em> oraz <em>maksymaln&#261;</em> d&#322;ugo&#347;&#263; pojedynczego has&#322;a. Wyniki dostajemy w postaci tablicy w k&#243;trej ka&#380;dy rekord stanowi jedno wygenerowane przez program has&#322;o.<a class="anchor-link" href="#Program-pozwalaj%C4%85cy-na-wygenerowanie-okre%C5%9Blonej-przez-u%C5%BCytkownika-liczby-losowych-hase%C5%82.-U%C5%BCytkownik-r%C3%B3wnie%C5%BC-mo%C5%BCe-poda%C4%87-minimaln%C4%85-oraz-maksymaln%C4%85-d%C5%82ugo%C5%9B%C4%87-pojedynczego-has%C5%82a.-Wyniki-dostajemy-w-postaci-tablicy-w-k%C3%B3trej-ka%C5%BCdy-rekord-stanowi-jedno-wygenerowane-przez-program-has%C5%82o.">&#182;</a></h3>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[214]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">PASSWORD_MIN_LENGTH</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">PASSWORD_MAX_LENGTH</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">AMOUNT_OF_PASSWORDS</span> <span class="o">=</span> <span class="mi">10</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[217]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">generate_random_password</span><span class="p">(</span><span class="n">PASSWORD_MIN_LENGTH</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">PASSWORD_MAX_LENGTH</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">AMOUNT_OF_PASSWORDS</span><span class="o">=</span><span class="mi">15</span><span class="p">):</span>
+    
+    <span class="n">to_use_in_password</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">ascii_lowercase</span> <span class="o">+</span> <span class="n">string</span><span class="o">.</span><span class="n">ascii_uppercase</span> <span class="o">+</span> <span class="n">string</span><span class="o">.</span><span class="n">digits</span> <span class="o">+</span> <span class="n">string</span><span class="o">.</span><span class="n">punctuation</span> 
+    <span class="n">symbols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;?&#39;</span><span class="p">,</span> <span class="s1">&#39;#&#39;</span><span class="p">]</span>
+    <span class="n">all_passwords</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">AMOUNT_OF_PASSWORDS</span><span class="p">):</span>
+        <span class="n">password_length</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">PASSWORD_MIN_LENGTH</span><span class="p">,</span> <span class="n">PASSWORD_MAX_LENGTH</span><span class="p">))</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choices</span><span class="p">(</span><span class="n">symbols</span><span class="p">,</span>  <span class="n">k</span> <span class="o">=</span> <span class="n">password_length</span><span class="p">)</span>
+        <span class="n">password</span> <span class="o">=</span> <span class="n">fake</span><span class="o">.</span><span class="n">bothify</span><span class="p">(</span><span class="n">text</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">text</span><span class="p">),</span> <span class="n">letters</span><span class="o">=</span><span class="n">to_use_in_password</span><span class="p">)</span>
+        <span class="n">all_passwords</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">password</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        
+    <span class="k">return</span> <span class="n">all_passwords</span>   
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[218]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">generate_random_password</span><span class="p">(</span><span class="n">PASSWORD_MIN_LENGTH</span><span class="p">,</span> <span class="n">PASSWORD_MAX_LENGTH</span><span class="p">,</span> <span class="n">AMOUNT_OF_PASSWORDS</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>1. 527?B93BO3G`550J3s^HI28tfCK#
+2. wtNfX80e2&gt;2#20701(
+3. 6,51r5&amp;9wx2J64A9o7000
+4. 4351\{4Y5}l&amp;754j4511(5-+33:40
+5. `634597Vm677&gt;7-836C!SbI_AS53
+6. 63R46G6606250HQ84!
+7. 035966G,P62f5kD8/2
+8. -81227[a0142&#39;6V969/R64
+9. 96141528ru&gt;/374s
+10. [76YY~W(185Q1)8109L.&lt;#5fn9
+</pre>
+</div>
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[218]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>[&#39;527?B93BO3G`550J3s^HI28tfCK#&#39;,
+ &#39;wtNfX80e2&gt;2#20701(&#39;,
+ &#39;6,51r5&amp;9wx2J64A9o7000&#39;,
+ &#39;4351\\{4Y5}l&amp;754j4511(5-+33:40&#39;,
+ &#39;`634597Vm677&gt;7-836C!SbI_AS53&#39;,
+ &#39;63R46G6606250HQ84!&#39;,
+ &#39;035966G,P62f5kD8/2&#39;,
+ &#34;-81227[a0142&#39;6V969/R64&#34;,
+ &#39;96141528ru&gt;/374s&#39;,
+ &#39;[76YY~W(185Q1)8109L.&lt;#5fn9&#39;]</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id=".seed_instance()---korzystanie-z-tych-samych-losowych-danych">.seed_instance() - korzystanie z tych samych losowych danych<a class="anchor-link" href="#.seed_instance()---korzystanie-z-tych-samych-losowych-danych">&#182;</a></h2>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Faker najczęściej jest wykorzystywany przy testach jednostkowych. Programiści często będą chcieli wygenerować ten sam zbiór danych. Dla tych właśnie potrzeb biblioteka dostarcza nam metodę seed_instance(), dzięki której możemy w dowolnym momencie tworzyć ten same dane za pomocą tych samych metod i dla tej samej wersji fakera</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h5 id="Utworzenie-seedu-4321-i-wygenerowanie-losowego-imienia">Utworzenie seedu 4321 i wygenerowanie losowego imienia<a class="anchor-link" href="#Utworzenie-seedu-4321-i-wygenerowanie-losowego-imienia">&#182;</a></h5>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[108]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fake</span><span class="o">.</span><span class="n">seed_instance</span><span class="p">(</span><span class="mi">4321</span><span class="p">)</span>
+<span class="n">fake</span><span class="o">.</span><span class="n">first_name</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[108]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&#39;Jonathan&#39;</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h5 id="Wygenerowanie-losowego-imienia">Wygenerowanie losowego imienia<a class="anchor-link" href="#Wygenerowanie-losowego-imienia">&#182;</a></h5>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[109]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fake</span><span class="o">.</span><span class="n">first_name</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[109]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&#39;Rick&#39;</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h5 id="Wygenerowanie-ponownie-imienia-na-podstawie-seedu-4321">Wygenerowanie ponownie imienia na podstawie seedu 4321<a class="anchor-link" href="#Wygenerowanie-ponownie-imienia-na-podstawie-seedu-4321">&#182;</a></h5>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[110]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fake</span><span class="o">.</span><span class="n">seed_instance</span><span class="p">(</span><span class="mi">4321</span><span class="p">)</span>
+<span class="n">fake</span><span class="o">.</span><span class="n">first_name</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[110]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&#39;Jonathan&#39;</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h5 id="Wygenerowanie-imienia-z-innym-seedem">Wygenerowanie imienia z innym seedem<a class="anchor-link" href="#Wygenerowanie-imienia-z-innym-seedem">&#182;</a></h5>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[111]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fake</span><span class="o">.</span><span class="n">seed_instance</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">fake</span><span class="o">.</span><span class="n">first_name</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[111]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&#39;Stephanie&#39;</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Dodawanie-w%C5%82asnego-zestawu-danych-i-przyczynianie-si%C4%99-do-rozwoju-biblioteki">Dodawanie w&#322;asnego zestawu danych i przyczynianie si&#281; do rozwoju biblioteki<a class="anchor-link" href="#Dodawanie-w%C5%82asnego-zestawu-danych-i-przyczynianie-si%C4%99-do-rozwoju-biblioteki">&#182;</a></h1>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Aby dołączyć swój zbiór danych trzeba:</p>
+<ol>
+<li>Sklonować repoztyorium fakera</li>
+<li>Stworzyć odpowiednią klasę</li>
+<li>Trzymać się dobrych praktyk programistycznych oraz konwencji całego projektu, aby nasz provider nie odbiegał swoim wyglądem lub działaniem od innych</li>
+<li>Odpowiednio udokumentować kod</li>
+<li>Od swojego brancha utworzyć Pull Request, który przejdzie przez procedurę code review użytkowników zarządzających repozytorium</li>
+</ol>
+<p>Aby nasz provder został zaakceptowany musi posiadać:</p>
+<ul>
+<li>Testy jednostkowe lub automatyczne</li>
+<li>Provider musi być opublikowany na PyPI</li>
+<li>Musi posiadać licencję OSI-Approved</li>
+<li>Nie może ponownie wykrzystywać żadnej funkcjonalności już zawrtej w bibliotece Faker</li>
+<li>Nie może zawierać żadnych wulgaryzmów ani w kodzie, ani w dokumentacji.</li>
+<li>Nie może zawierać żadnego złośliwego ani zbierającego dane kodu.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Bibliografia-oraz-u%C5%BCyte-%C5%BAr%C3%B3d%C5%82a:">Bibliografia oraz u&#380;yte &#378;r&#243;d&#322;a:<a class="anchor-link" href="#Bibliografia-oraz-u%C5%BCyte-%C5%BAr%C3%B3d%C5%82a:">&#182;</a></h1>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>[1] <a href="https://faker.readthedocs.io/">https://faker.readthedocs.io/</a></p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="//TODO-POPRAWI%C4%86-SPIS-TRE%C5%9ACI">//TODO POPRAWI&#262; SPIS TRE&#346;CI<a class="anchor-link" href="#//TODO-POPRAWI%C4%86-SPIS-TRE%C5%9ACI">&#182;</a></h1>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
