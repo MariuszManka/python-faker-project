@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mariusz Manka - Michał Hutnik - Języki Skryptowe W Analizie Danych - PROJEKT GRUPOWY </title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Mariusz Manka - Michał Hutnik - Języki Skryptowe W Analizie Danych - PROJEKT GRUPOWY</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -13977,7 +13977,23 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
-<h1 id="Wprowadzenie-do-biblioteki-Faker">Wprowadzenie do biblioteki Faker<a class="anchor-link" href="#Wprowadzenie-do-biblioteki-Faker">&#182;</a></h1><h2 id="Spis-tre%C5%9Bci:">Spis tre&#347;ci:<a class="anchor-link" href="#Spis-tre%C5%9Bci:">&#182;</a></h2><h3 id="1.-Wprowadzenie-do-tematu-losowo%C5%9Bci-w-systemach-komputerowych">1. Wprowadzenie do tematu losowo&#347;ci w systemach komputerowych<a class="anchor-link" href="#1.-Wprowadzenie-do-tematu-losowo%C5%9Bci-w-systemach-komputerowych">&#182;</a></h3><h3 id="2.-Import-biblioteki-Faker-oraz-innych-niezb%C4%99dnych-bibliotek">2. Import biblioteki Faker oraz innych niezb&#281;dnych bibliotek<a class="anchor-link" href="#2.-Import-biblioteki-Faker-oraz-innych-niezb%C4%99dnych-bibliotek">&#182;</a></h3><h3 id="3.-Tworzenie-instancji-klasy-Faker.">3. Tworzenie instancji klasy <code>Faker</code>.<a class="anchor-link" href="#3.-Tworzenie-instancji-klasy-Faker.">&#182;</a></h3><h3 id="4.-Lokalizacja">4. Lokalizacja<a class="anchor-link" href="#4.-Lokalizacja">&#182;</a></h3><h3 id="5.-Podstawowe-funkcje">5. Podstawowe funkcje<a class="anchor-link" href="#5.-Podstawowe-funkcje">&#182;</a></h3><hr>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Wprowadzenie-do-biblioteki-Faker">Wprowadzenie do biblioteki Faker<a class="anchor-link" href="#Wprowadzenie-do-biblioteki-Faker">&#182;</a></h1>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<hr>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Spis-tre%C5%9Bci:">Spis tre&#347;ci:<a class="anchor-link" href="#Spis-tre%C5%9Bci:">&#182;</a></h2><h3 id="1.--Wprowadzenie-do-tematu-losowo%C5%9Bci-w-systemach-komputerowych">1.  Wprowadzenie do tematu losowo&#347;ci w systemach komputerowych<a class="anchor-link" href="#1.--Wprowadzenie-do-tematu-losowo%C5%9Bci-w-systemach-komputerowych">&#182;</a></h3><h3 id="2.-Podstawowe-poj%C4%99cia-dotycz%C4%85ce-biblioteki">2. Podstawowe poj&#281;cia dotycz&#261;ce biblioteki<a class="anchor-link" href="#2.-Podstawowe-poj%C4%99cia-dotycz%C4%85ce-biblioteki">&#182;</a></h3><h3 id="3.-Tworzenie-instancji-klasy-Faker">3. Tworzenie instancji klasy Faker<a class="anchor-link" href="#3.-Tworzenie-instancji-klasy-Faker">&#182;</a></h3><h3 id="4.-Lokalizacja">4. Lokalizacja<a class="anchor-link" href="#4.-Lokalizacja">&#182;</a></h3><h3 id="5.-Podstawowe-funkcje">5. Podstawowe funkcje<a class="anchor-link" href="#5.-Podstawowe-funkcje">&#182;</a></h3><h3 id="6.-Bibioteki-community-providers">6. Bibioteki community providers<a class="anchor-link" href="#6.-Bibioteki-community-providers">&#182;</a></h3><h3 id="7.-Dodawanie-w%C5%82asnego-Providera">7. Dodawanie w&#322;asnego Providera<a class="anchor-link" href="#7.-Dodawanie-w%C5%82asnego-Providera">&#182;</a></h3><h3 id="8.-Zastosowania-biblioteki-Faker-w-przyk%C5%82adach:">8. Zastosowania biblioteki Faker w przyk&#322;adach:<a class="anchor-link" href="#8.-Zastosowania-biblioteki-Faker-w-przyk%C5%82adach:">&#182;</a></h3><h3 id="9.-Pseudolosowo%C5%9B%C4%87-oraz-zmiana-ziarna">9. Pseudolosowo&#347;&#263; oraz zmiana ziarna<a class="anchor-link" href="#9.-Pseudolosowo%C5%9B%C4%87-oraz-zmiana-ziarna">&#182;</a></h3><h3 id="10.-Dodawanie-w%C5%82asnego-zestawu-danych-i-przyczynianie-si%C4%99-do-rozwoju-biblioteki">10. Dodawanie w&#322;asnego zestawu danych i przyczynianie si&#281; do rozwoju biblioteki<a class="anchor-link" href="#10.-Dodawanie-w%C5%82asnego-zestawu-danych-i-przyczynianie-si%C4%99-do-rozwoju-biblioteki">&#182;</a></h3><h3 id="11.-Bibliografia-oraz-u%C5%BCyte-%C5%BAr%C3%B3d%C5%82a">11. Bibliografia oraz u&#380;yte &#378;r&#243;d&#322;a<a class="anchor-link" href="#11.-Bibliografia-oraz-u%C5%BCyte-%C5%BAr%C3%B3d%C5%82a">&#182;</a></h3><hr>
 
 </div>
 </div>
@@ -13989,9 +14005,9 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Losowo%C5%9B%C4%87-w-systemach-komputerowych">Losowo&#347;&#263; w systemach komputerowych<a class="anchor-link" href="#Losowo%C5%9B%C4%87-w-systemach-komputerowych">&#182;</a></h3><p>W przypadku komputerów oraz wszelkiego rodzaju systemów komputerowych, ciężko mówić o jakiejkolwiek losowości. Komputery są maszynami liczącymi - z założenia wykonującymi bardziej lub mniej skomplikowane obliczenia matematyczne. Same w sobie nie są w stanie wygenerować liczby losowej.<br>
-Aby wygenerować liczbę losową komputer musiałby zmierzyć pewien rodzaj zjawiska fizycznego zachodzącego poza nim samym. Teoria mówi że do wygenerowania liczb losowych komputery mogłby mierzyć rozpad radioaktywny atomu - nie ma sposobu, aby wiedzieć na pewno, kiedy nastąpi rozpad radioaktywny, więc jest to zasadniczo "czysta przypadkowość". Bardziej codziennym przypadkiem może być mierzenie przez komputer <strong>szumu atmosferycznego</strong> lub też <strong>czas naciśnięcia klawiszy na klawiaturze</strong>. Te dwie miary w przyblizeniu można nazwać przypadkowymi. Jednak i te praktyki są bardzo rzadko stosowane. W przypadku systemów komputerowych jednak najczęściej będziemy mówili o <code>pseudolosowości</code>.</p>
-<h3 id="Pseudolosowo%C5%9B%C4%87">Pseudolosowo&#347;&#263;<a class="anchor-link" href="#Pseudolosowo%C5%9B%C4%87">&#182;</a></h3><p>Liczby pseudolosowe są generowane za pomocą <strong>generatorów liczb pseudolosowych.</strong>  Przyjmują one pewną wartość - tak zwane <code>ziarno</code> z (ang. <code>seed</code>) i wykonują na nich szereg operacji matematycznych. Liczba która wyjdzie w wyniku takich przekształceń jest w pewnym sensie losowa. Nie jest to jednak w pełni losowa wartość, ponieważ <strong>znająć <code>ziarno</code> jesteśmy w stanie odtworzyć liczbę zwróconą w wyniku wszystkich przekształceń.</strong>  Systemy komputerowe jako <code>ziarno</code> <strong>najczęściej wybierają aktualną datę</strong>. W systemach z rodziny Unix, ta przechowywana jest jako <strong>liczba sekund która upłynęła od 1 stycznia 1970 roku.</strong> Stąd liczba ta w każdej sekundzie będzie inna. To podejście jednak ma jedną wadę, liczby wygenerowane w tej samej sekunidze będą sobie równe ponieważ liczba na wejściu - <code>ziarno</code> będzie identyczna. Jednak w większości przypadków takie podejście sprawdza się dobrze, i zaspokaja potrzeby większości programistów. Należy również nadmienić że większość programów oraz generatorów liczb losowych dopuszcza podanie własnego <code>ziarna</code> na potrzeby generowania liczb.</p>
-<h3 id="Czym-s%C4%85-dane-losowe?">Czym s&#261; <em>dane losowe</em>?<a class="anchor-link" href="#Czym-s%C4%85-dane-losowe?">&#182;</a></h3><p><em>Dane losowe</em> nazywane również fikcyjnymi - jak sama nazwa wskazuje są to losowo generowane dane, najczęściej z jakiegoś określonego zakresu. Z założenia mają one być fałszywe, przy jednoczesym jak najwięszym zbliżeniu do danych faktycznych. Innymi słowy - losowo generowana para - imię i nazwisko - będzie zawierała imię oraz nazwisko jak najbardziej zbliżone do używanych w danym języku, tak aby dane wydawały się być prawdziwe, a jednocześnie nie wskazywały na konkretną osobę.</p>
+Aby wygenerować liczbę losową komputer musiałby zmierzyć pewien rodzaj zjawiska fizycznego zachodzącego poza nim samym. Teoria mówi że do wygenerowania liczb losowych komputery mogłyby mierzyć rozpad radioaktywny atomu - nie ma sposobu, aby wiedzieć na pewno, kiedy nastąpi rozpad radioaktywny, więc jest to zasadniczo "czysta przypadkowość". Bardziej codziennym przypadkiem może być mierzenie przez komputer <strong>szumu atmosferycznego</strong> lub też <strong>czas naciśnięcia klawiszy na klawiaturze</strong>. Te dwie miary w przybliżeniu można nazwać przypadkowymi. Jednak i te praktyki są bardzo rzadko stosowane. W przypadku systemów komputerowych jednak najczęściej będziemy mówili o <code>pseudolosowości</code>.</p>
+<h3 id="Pseudolosowo%C5%9B%C4%87">Pseudolosowo&#347;&#263;<a class="anchor-link" href="#Pseudolosowo%C5%9B%C4%87">&#182;</a></h3><p>Liczby pseudolosowe są generowane za pomocą <strong>generatorów liczb pseudolosowych.</strong>  Przyjmują one pewną wartość - tak zwane <code>ziarno</code> z (ang. <code>seed</code>) i wykonują na nich szereg operacji matematycznych. Liczba która wyjdzie w wyniku takich przekształceń jest w pewnym sensie losowa. Nie jest to jednak w pełni losowa wartość, ponieważ <strong>znając <code>ziarno</code> jesteśmy w stanie odtworzyć liczbę zwróconą w wyniku wszystkich przekształceń.</strong>  Systemy komputerowe jako <code>ziarno</code> <strong>najczęściej wybierają aktualną datę</strong>. W systemach z rodziny Unix, ta przechowywana jest jako <strong>liczba sekund która upłynęła od 1 stycznia 1970 roku.</strong> Stąd liczba ta w każdej sekundzie będzie inna. To podejście jednak ma jedną wadę, liczby wygenerowane w tej samej sekundzie będą sobie równe ponieważ liczba na wejściu - <code>ziarno</code> będzie identyczna. Jednak w większości przypadków takie podejście sprawdza się dobrze, i zaspokaja potrzeby większości programistów. Należy również nadmienić że większość programów oraz generatorów liczb losowych dopuszcza podanie własnego <code>ziarna</code> na potrzeby generowania liczb.</p>
+<h3 id="Czym-s%C4%85-dane-losowe?">Czym s&#261; <em>dane losowe</em>?<a class="anchor-link" href="#Czym-s%C4%85-dane-losowe?">&#182;</a></h3><p><em>Dane losowe</em> nazywane również fikcyjnymi - jak sama nazwa wskazuje są to losowo generowane dane, najczęściej z jakiegoś określonego zakresu. Z założenia mają one być fałszywe, przy jednoczesnym jak największym zbliżeniu do danych faktycznych. Innymi słowy - losowo generowana para - imię i nazwisko - będzie zawierała imię oraz nazwisko jak najbardziej zbliżone do używanych w danym języku, tak aby dane wydawały się być prawdziwe, a jednocześnie nie wskazywały na konkretną osobę.</p>
 <h3 id="Gdzie-u%C5%BCywane-s%C4%85-dane-losowe?">Gdzie u&#380;ywane s&#261; <em>dane losowe</em>?<a class="anchor-link" href="#Gdzie-u%C5%BCywane-s%C4%85-dane-losowe?">&#182;</a></h3><p>Takie dane mają stanowić substytut lub obiekt zastępczy dla prawdziwych danych. Używane są najczęściej do celów <strong>testowych i operacyjnych</strong>. Wykorzystuje się je między innymi:</p>
 <ul>
 <li>Do zapełniania baz danych losowymi rekordami, </li>
@@ -14040,16 +14056,16 @@ conda install Faker</code></pre>
 <strong>Podstawowi <em>Dostawcy</em> to między innymi:</strong></p>
 <ol>
 <li><a href="https://faker.readthedocs.io/en/master/providers/faker.providers.address.html"><code>faker.providers.address</code></a> - zawiera on funkcje pozwalające zwrócić np. losowy adres zamieszkania, losową ulicę, miasto, numer domu itd.</li>
-<li><a href="https://faker.readthedocs.io/en/master/providers/faker.providers.currency.html"><code>faker.providers.currency</code></a> - zawiera on m.in. funkcje zwracające krotkę z losową walutą (lub kryptowalutą) jako parę - (<code>kod_waluty</code>, <code>nazwa_waluty</code>), nazwę waluty, kod waluty, symbol waluty itd.</li>
+<li><a href="https://faker.readthedocs.io/en/master/providers/faker.providers.currency.html"><code>faker.providers.currency</code></a> - zawiera on m.in. funkcje zwracające krotkę z losową walutą (lub krypto walutą) jako parę - (<code>kod_waluty</code>, <code>nazwa_waluty</code>), nazwę waluty, kod waluty, symbol waluty itd.</li>
 <li><a href="https://faker.readthedocs.io/en/master/providers/faker.providers.person.html"><code>faker.providers.person</code></a> - zawiera funkcje zwracające m.in. imię, nazwisko (zarówno losowo męskie i damskie, jak i oddzielnie tylko męskie bądź też tylko damskie), parę imię i nazwisko, przedrostek np. "inż" lub "dr" itd. </li>
 <li>Bardzo ciekawym <em>dostawcą</em>, wartym wspomnienia jest: <a href="https://faker.readthedocs.io/en/master/providers/faker.providers.profile.html"><code>faker.providers.profile</code></a> - posiada on tylko dwie funkcje <code>profile</code> oraz <code>simple_profile</code>. Zwracają one profil danej osoby w postaci słownika, z takimi informacjami jak: <strong>imię</strong>, <strong>nazwisko</strong>, <strong>data urodzenia</strong>, <strong>adres</strong>, <strong>grupa krwi</strong>, <strong>nazwa użytkownika</strong>, <strong>strona internetowa</strong>, <strong>adres e-mail</strong> i wiele więcej. Innymi słowy, te funkcje zwracają kompletny profil użytkownika, który można bez problemu wykorzystać np. do mockowania bazy danych użytkowników.</li>
 </ol>
-<h4 id="Lista-wszystkich-podstawowych-dostawc%C3%B3w-jest-dostepna-pod-adresem:-faker.readthedocs.io/en/master/providers"><strong>Lista wszystkich podstawowych <em>dostawc&#243;w</em> jest dostepna pod adresem</strong>: <a href="https://faker.readthedocs.io/en/master/providers.html"><code>faker.readthedocs.io/en/master/providers</code></a><a class="anchor-link" href="#Lista-wszystkich-podstawowych-dostawc%C3%B3w-jest-dostepna-pod-adresem:-faker.readthedocs.io/en/master/providers">&#182;</a></h4>
+<h4 id="Lista-wszystkich-podstawowych-dostawc%C3%B3w-jest-dost%C4%99pna-pod-adresem:-faker.readthedocs.io/en/master/providers"><strong>Lista wszystkich podstawowych <em>dostawc&#243;w</em> jest dost&#281;pna pod adresem</strong>: <a href="https://faker.readthedocs.io/en/master/providers.html"><code>faker.readthedocs.io/en/master/providers</code></a><a class="anchor-link" href="#Lista-wszystkich-podstawowych-dostawc%C3%B3w-jest-dost%C4%99pna-pod-adresem:-faker.readthedocs.io/en/master/providers">&#182;</a></h4>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="2.-Community-Providers-(Dostawcy-spo%C5%82eczno%C5%9Bci):">2. Community Providers (Dostawcy spo&#322;eczno&#347;ci):<a class="anchor-link" href="#2.-Community-Providers-(Dostawcy-spo%C5%82eczno%C5%9Bci):">&#182;</a></h2><p>Jest to grupa dostawców zaprojektowana <strong>przez społeczność</strong>. <code>Faker</code> daje możliwość tworzenia swoich własnych <em>dostawców</em>, z własnymi funkcjonalnościami. Najczęsciej tacy <em>dostawcy</em> używani są przez programistów tylko w lokalnym projekcie na własne potrzeby, natomiast twórcy biblioteki dają nam możliwość publikacji naszego <em>dostawcy</em> i dołączenia go do oficjalnego projektu. Istnieje taka możliwość, jednakże wcześniej trzeba spełnić szereg wymagań opisanych dokładniej na stronie: <a href="https://faker.readthedocs.io/en/master/communityproviders.html"><code>faker.readthedocs.io/en/master/communityproviders</code></a> (tutaj również znajdziemy listę <em>dostawców</em> społeczności już dołączonych do projektu)</p>
+<h2 id="2.-Community-Providers-(Dostawcy-spo%C5%82eczno%C5%9Bci):">2. Community Providers (Dostawcy spo&#322;eczno&#347;ci):<a class="anchor-link" href="#2.-Community-Providers-(Dostawcy-spo%C5%82eczno%C5%9Bci):">&#182;</a></h2><p>Jest to grupa dostawców zaprojektowana <strong>przez społeczność</strong>. <code>Faker</code> daje możliwość tworzenia swoich własnych <em>dostawców</em>, z własnymi funkcjonalnościami. Najczęściej tacy <em>dostawcy</em> używani są przez programistów tylko w lokalnym projekcie na własne potrzeby, natomiast twórcy biblioteki dają nam możliwość publikacji naszego <em>dostawcy</em> i dołączenia go do oficjalnego projektu. Istnieje taka możliwość, jednakże wcześniej trzeba spełnić szereg wymagań opisanych dokładniej na stronie: <a href="https://faker.readthedocs.io/en/master/communityproviders.html"><code>faker.readthedocs.io/en/master/communityproviders</code></a> (tutaj również znajdziemy listę <em>dostawców</em> społeczności już dołączonych do projektu)</p>
 
 </div>
 </div>
@@ -15125,9 +15141,9 @@ Zagreb airport
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Stowrzony przez nas przykładowy <code>Provider</code> ma na celu zademonstrowanie w praktyce procesu dodawania własnego <em>dostawcy</em> do bazowej instancji klasy <code>Faker</code>.</p>
+<p>Stworzony przez nas przykładowy <code>Provider</code> ma na celu zademonstrowanie w praktyce procesu dodawania własnego <em>dostawcy</em> do bazowej instancji klasy <code>Faker</code>.</p>
 <h3 id="Posiada-on-dwie-metody:">Posiada on dwie metody:<a class="anchor-link" href="#Posiada-on-dwie-metody:">&#182;</a></h3><p><strong>1.</strong> <code>random_forecast</code> - Zadaniem tej metody jest komunikacja z zewnętrznym API w celu <strong>pobrania prognozy pogody na najbliższe 3 dni w formie listy obiektów gdzie każdy z nich zawiera informacje o prognozie z innej godziny.</strong> W tym celu za pomocą biblioteki <code>requests</code> łączymy się z zewnętrznym API, oraz pobieramy prognozę pogody na najbliższe 3 dni. Ilość obiektów z prognozą pogody które otrzymamy Z API określa parametr <code>cnt</code> przekazywany jako drugi argument do naszej metody <code>requests.get()</code>.
-Gdy już dostaniemy pozytywną odpowiedź z serwera, przchodzimy pętlą <code>for</code> po każdym obiekcie z prognozą pogody. Każdy z tych obiektów ma wiele atrybutów, nas najbardziej interesują informacje dostarczane wraz z atrybutem <code>main</code>.<br>
+Gdy już dostaniemy pozytywną odpowiedź z serwera, przechodzimy  pętlą <code>for</code> po każdym obiekcie z prognozą pogody. Każdy z tych obiektów ma wiele atrybutów, nas najbardziej interesują informacje dostarczane wraz z atrybutem <code>main</code>.<br>
 &lt;/br&gt;
 <strong>Oto przykładowe dane kryjące się pod tym atrybutem:</strong></p>
 
@@ -15983,27 +15999,14 @@ Kelly
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="//TODO-POPRAWI%C4%86-SPIS-TRE%C5%9ACI">//TODO POPRAWI&#262; SPIS TRE&#346;CI<a class="anchor-link" href="#//TODO-POPRAWI%C4%86-SPIS-TRE%C5%9ACI">&#182;</a></h1>
+<hr>
+
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="//TODO-SPRAWDZI%C4%86-ORAZ-POPRAWI%C4%86-B%C5%81%C4%98DY-ORTOGRAFICZNE-I-LITER%C3%93WKI:-https://www.ortograf.pl/">//TODO SPRAWDZI&#262; ORAZ POPRAWI&#262; B&#321;&#280;DY ORTOGRAFICZNE I LITER&#211;WKI: <a href="https://www.ortograf.pl/">https://www.ortograf.pl/</a><a class="anchor-link" href="#//TODO-SPRAWDZI%C4%86-ORAZ-POPRAWI%C4%86-B%C5%81%C4%98DY-ORTOGRAFICZNE-I-LITER%C3%93WKI:-https://www.ortograf.pl/">&#182;</a></h1>
+<h1 id="Dzi%C4%99kujemy-za-uwag%C4%99!">Dzi&#281;kujemy za uwag&#281;!<a class="anchor-link" href="#Dzi%C4%99kujemy-za-uwag%C4%99!">&#182;</a></h1>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
 </div>
 </body>
 
